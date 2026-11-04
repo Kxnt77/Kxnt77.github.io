@@ -23,7 +23,15 @@ model_rec, model_poly = load_models()
 st.title("🍎 YOLOv8 Fruit Detection & Segmentation")
 st.write("อัปโหลดรูปภาพผลไม้เพื่อทดสอบการทำนายด้วยโมเดล YOLO (Rec vs Polygon)")
 
-# --- ย้ายการตั้งค่ามาไว้ตรงกลางหน้าเว็บ ---
+# --- ส่วนแสดงรายชื่อคลาสผลทำนายทั้งหมดจากโมเดล ---
+class_names = list(model_poly.names.values())
+st.markdown("**🏷️ คลาสทั้งหมดที่โมเดลสามารถทำนายได้ (Supported Classes):**")
+
+# แสดงผลคลาสเป็น Badge สีสวยงาม
+class_badges = " ".join([f"`{name}`" for name in class_names])
+st.markdown(class_badges)
+
+# --- ส่วนตั้งค่าโมเดล ---
 st.divider()
 col_set1, col_set2 = st.columns(2)
 
