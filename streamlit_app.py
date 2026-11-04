@@ -71,7 +71,6 @@ col_train1, col_train2 = st.columns(2)
 
 with col_train1:
     st.markdown("**1. ผลการเทรน Rectangle (Bounding Box)**")
-    # วางไฟล์รูปผลการเทรนไว้ที่โฟลเดอร์ images/rec_results.png (หรือเปลี่ยนชื่อไฟล์ตามที่มี)
     train_rec_path = BASE_DIR / "images" / "rec_results.png"
     if train_rec_path.exists():
         st.image(str(train_rec_path), use_container_width=True)
@@ -80,7 +79,6 @@ with col_train1:
 
 with col_train2:
     st.markdown("**2. ผลการเทรน Polygon (Segmentation)**")
-    # วางไฟล์รูปผลการเทรนไว้ที่โฟลเดอร์ images/poly_results.png (หรือเปลี่ยนชื่อไฟล์ตามที่มี)
     train_poly_path = BASE_DIR / "images" / "poly_results.png"
     if train_poly_path.exists():
         st.image(str(train_poly_path), use_container_width=True)
@@ -89,4 +87,4 @@ with col_train2:
 
 # --- Footer เครดิตผู้จัดทำ ---
 st.divider()
-st.caption("created by 6806021411236 kanthida hasut ITI sec B")
+st.caption("created by 6806021411236 Kanthida Hasut ITI sec B")
